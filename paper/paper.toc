@@ -1,0 +1,42 @@
+\contentsline {chapter}{\numberline {第1章}序論}{3}
+\contentsline {section}{\numberline {1.1}研究の背景}{3}
+\contentsline {section}{\numberline {1.2}NHK高専ロボットコンテスト}{6}
+\contentsline {section}{\numberline {1.3}研究の目的}{9}
+\contentsline {section}{\numberline {1.4}論文の構成}{9}
+\contentsline {chapter}{\numberline {第2章}強い高専の調査}{10}
+\contentsline {section}{\numberline {2.1}過去のトーナメント結果の調査}{10}
+\contentsline {section}{\numberline {2.2}地区大会の成績調査}{10}
+\contentsline {section}{\numberline {2.3}全国大会の成績調査}{11}
+\contentsline {section}{\numberline {2.4}強い高専}{12}
+\contentsline {chapter}{\numberline {第3章}他高専と金沢高専の比較}{13}
+\contentsline {section}{\numberline {3.1}金沢高専の現状}{13}
+\contentsline {section}{\numberline {3.2}訪問調査準備}{13}
+\contentsline {subsection}{\numberline {3.2.1}奈良・福井高専生にコンタクトをとる}{13}
+\contentsline {subsection}{\numberline {3.2.2}他高専訪問調査・旅程}{13}
+\contentsline {subsection}{\numberline {3.2.3}各高専について}{14}
+\contentsline {subsubsection}{奈良高専について}{14}
+\contentsline {subsubsection}{福井高専について}{14}
+\contentsline {subsubsection}{金沢高専について}{14}
+\contentsline {subsection}{\numberline {3.2.4}調査内容}{14}
+\contentsline {section}{\numberline {3.3}訪問調査}{15}
+\contentsline {subsection}{\numberline {3.3.1}奈良高専・調査項目}{15}
+\contentsline {subsection}{\numberline {3.3.2}福井高専・調査項目}{16}
+\contentsline {section}{\numberline {3.4}調査結果}{16}
+\contentsline {section}{\numberline {3.5}考察}{18}
+\contentsline {chapter}{\numberline {第4章}資料作成}{19}
+\contentsline {section}{\numberline {4.1}文献調査}{19}
+\contentsline {section}{\numberline {4.2}今年度の経験}{19}
+\contentsline {section}{\numberline {4.3}資料まとめ}{19}
+\contentsline {subsection}{\numberline {4.3.1}機械系}{19}
+\contentsline {subsection}{\numberline {4.3.2}電気系}{31}
+\contentsline {subsection}{\numberline {4.3.3}制御系}{36}
+\contentsline {subsection}{\numberline {4.3.4}マネジメント系}{36}
+\contentsline {chapter}{\numberline {第5章}勝つためには}{37}
+\contentsline {section}{\numberline {5.1}技術の伝承}{37}
+\contentsline {section}{\numberline {5.2}交流会に参加}{37}
+\contentsline {section}{\numberline {5.3}多くの試合を経験}{37}
+\contentsline {chapter}{\numberline {第6章}結論}{38}
+\contentsline {section}{\numberline {6.1}本研究まとめ}{38}
+\contentsline {section}{\numberline {6.2}今後の課題}{38}
+\contentsline {chapter}{参考文献}{39}
+\contentsline {chapter}{謝辞}{40}

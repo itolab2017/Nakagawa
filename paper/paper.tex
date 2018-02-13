@@ -1,0 +1,666 @@
+\documentclass[12pt,oneside]{paper}
+
+\usepackage{url}
+\usepackage{float}
+\usepackage[dvipdfmx]{graphicx}
+\usepackage{multicol}
+\newcommand{\itab}[1]{\hspace{0em}\rlap{#1}}
+\newcommand{\tab}[1]{\hspace{.2\textwidth}\rlap{#1}}
+
+% タイトル
+\title{強い高専$\cdot$ロボコン資料収集についての調査研究}
+\author{中川晴喜}
+
+\begin{document}
+
+% 行間
+\setlength{\baselineskip}{9truemm}
+
+%文字間
+\kanjiskip=.53zw plus 3pt minus 3pt
+\xkanjiskip=.53zw plus 3pt minus 3pt
+
+% 目次
+\tableofcontents
+%\newpage
+
+%本文
+\chapter{序論}
+
+	\section{研究の背景}
+	\,本研究室は毎年NHK高専ロボットコンテストに参加している.これまでに三年連続,全国大会に出場しており,
+	今年は地区大会で優勝することを目指した.
+	本大会は本来,アイデア対決である.重点となる項目は面白い要素やデザイン性,難しい,もしくは新しい機構などがある.
+	各チーム,各年で異なる.地区大会で優勝することを目指した私たちは,
+	勝てることに重点をおいた図\ref{fig.yeah},\ref{fig.naga},\ref{fig.tune}に示す,三台のロボットを製作した.
+	しかし,地区大会の初戦,競技を行っている最中に一台が操縦ができなくなるというマシントラブルに遭い,あと少しのところで
+	地区大会一回戦負けという無念な結果になった.\\
+	　初戦の相手から強豪,鈴鹿高専のBチームにあたったことは不運であったかもしれないが,
+	このトーナメントの二回戦以降には,テストランでの不調がみられる高専が多くみられたため,
+	この初戦で勝つことができたならば優勝はできなくとも,全国大会には行けただろうと思われる一戦であった.\\
+	　これまでの大会結果も含め,考察した結果,そもそも金沢高専は初戦を勝ち抜いたことが非常に少ないことが明らかとなった.
+	勝てることに重点をおいた今年でさえも,初戦を突破できない理由として,活動形態に問題があるのではないかという疑問が浮かび上がった.
+	
+	%Yeah!,NAGA★,TUNE#の写真
+	\begin{figure}[H]
+	\begin{center}
+	\includegraphics[width=120mm]{yeah.png}
+	\end{center}
+	\caption{TOSHI.Yeah!}
+	\label{fig.yeah}
+	\end{figure}
+	
+	\begin{figure}[H]
+	\begin{center}
+	\includegraphics[width=120mm]{naga.png}
+	\end{center}
+	\caption{Toshi.NAGA★}
+	\label{fig.naga}
+	\end{figure}
+	
+	\begin{figure}[H]
+	\begin{center}
+	\includegraphics[width=120mm]{tune.png}
+	\end{center}
+	\caption{Toshi.TUNE\#}
+	\label{fig.tune}
+	\end{figure}
+	
+	\section{NHK高専ロボットコンテスト}
+	\,通称高専ロボコンとよばれ,今年で30周年であった.高専生による手作りロボットのアイデア対決をする大会であり,
+	高等専門学校の学生には,高専ロボコンにあこがれて入学した者も少なからずいる.
+	各地区大会での優勝校および推薦校のみ全国大会に出場でき,
+	図\ref{fig.potegoro},\ref{fig.house},\ref{fig.tsudumi}に示す,本研究室のロボットは2014年から2016年まで三年連続全国大会に出場していた.
+	
+	%2014～2016のロボットの写真
+	\begin{figure}[H]
+	\begin{center}
+	\includegraphics[width=120mm]{2014.jpg}
+	\end{center}
+	\caption{ポテ☆ゴロー！！(2014)}
+	\label{fig.potegoro}
+	\end{figure}
+	
+	\begin{figure}[H]
+	\begin{center}
+	\includegraphics[width=120mm]{2015.jpg}
+	\end{center}
+	\caption{投げろ！ホースちゃん(2015)}
+	\label{fig.house}
+	\end{figure}
+	
+	\begin{figure}[H]
+	\begin{center}
+	\includegraphics[width=120mm]{2016.jpg}
+	\end{center}
+	\caption{鼓積(2016)}
+	\label{fig.tsudumi}
+	\end{figure}
+	
+	\section{研究の目的}
+	\,高専ロボコンにおいて初戦を勝つことは,まだ何が起こるかわからない試合で勝つことである.
+	1回戦以降の経験がある状態とは全く異なるため,非常に重要であり,真にはじめてロボットをテストする環境である.
+	また,１回戦を勝てないということは,経験できる試合が少ないため,戦略,操縦といった経験を得にくいことにもつながり,
+	年に一度のトーナメント形式である性質上,勝った経験が多いほど,さらに強くなれる可能性は多いと考えられる.\\
+	　そこで,過去の高専ロボコンの地区および全国大会の成績を集め,調査することにより,高専ロボコンで一番勝っている高専を探して,
+	どのように活動を行っているかの視察,聞き込み,調査を行う.
+	また,他の高専の調査も行い,金沢高専との比較を行う.高専ロボコンで勝つために必要なことを見つけ,
+	来年度からの高専ロボコン活動に役立てることを目標とする.
+	また,高専ロボコンに関する文献を調査し,ロボット製作において有益な情報をまとめて資料として残すことで,
+	来年度からの活動を支援する.
+	
+	\section{論文の構成}
+	\,この論文では以下のように構成されている．
+	１章では，我々の研究目的や高専ロボコンを考察したものである．
+
+
+	２章では，強い高専の調査，そこから強い高専を特定することについて研究したものである．
+
+
+	３章では，他高専を訪問調査した結果から,金沢高専と比較している．
+
+
+	４章では，今年度の資料の製作について記している.
+
+
+	５章では，勝つための方法を考察したものである.
+
+
+	６章では，本研究のまとめについて記されている.
+	
+\chapter{強い高専の調査}
+
+	\section{過去のトーナメント結果の調査}
+	\,地区大会において10年分のトーナメント結果をインターネットで調査したところ,
+	表\ref{tble.kekka}に示されている分を集めることができた. 2007年から2012年にかけての結果は不明な部分が多いため,
+	2013年から2017年までの5年分のデータで調査することにした.全国大会については2012年から2016年の5年間で調査する.
+	\begin{table}[H]
+	\caption{地区大会のトーナメント結果の有無}
+	\label{tble.kekka}
+	\centering
+	\begin{tabular}[H]{|c|c|c|c|c|c|c|c|c|}
+	\hline
+	年＼地区&北海道&東北&関東・甲信越&東海・北陸&近畿&中国&四国&九州・沖縄\\
+	\hline
+	2007&-&-&-&○&-&○&-&-\\
+	\hline
+	2008&-&-&○&○&-&○&-&-\\
+	\hline
+	2009&-&-&○&○&-&○&-&-\\
+	\hline
+	2010&-&-&○&○&-&○&-&-\\
+	\hline
+	2011&-&-&○&-&-&○&-&-\\
+	\hline
+	2012&-&-&○&-&○&-&-&-\\
+	\hline
+	2013&○&○&○&○&○&○&○&○\\
+	\hline
+	2014&○&○&○&○&○&○&○&○\\
+	\hline
+	2015&○&○&○&○&○&○&○&○\\
+	\hline
+	2016&○&○&○&○&○&○&○&○\\
+	\hline
+	2017&○&○&○&○&○&○&○&○\\
+	\hline
+	\end{tabular}
+	\end{table}
+	
+	\section{地区大会の成績調査}
+	\,地区大会において各試合での勝敗を確認し,図1にグラフで示したところ,奈良高専が一番であった.
+	出場高専数が多いため,グラフには合計勝利数が多い順に上位下位のそれぞれ10高専を示してある.
+	\begin{figure}[H]
+	\begin{center}
+	\includegraphics[width=120mm]{tikus.png}
+	\end{center}
+	\caption{地区大会勝利数}
+	\label{fig.tikus}
+	\end{figure}
+	
+	\section{全国大会の成績調査}
+	\,全国大会において各試合での勝敗を確認し,図2にグラフで示したところ,奈良高専が一番であった.
+	出場高専数が多いため,グラフには合計勝利数が多い順に上位下位のそれぞれ10高専を示してある.
+	\begin{figure}[H]
+	\begin{center}
+	\includegraphics[width=120mm]{zenkokus.png}
+	\end{center}
+	\caption{全国大会勝利数}
+	\label{fig.zenkokus}
+	\end{figure}
+	
+	\section{強い高専}
+	\,調査の結果,高専ロボコンにおいて最も強い高専は奈良高専であることが分かった.
+	奈良高専は地区大会,全国大会ともに勝利数が全出場高専57校の中で最も多く,
+	Aチームに限らずBチームであっても活躍していることから,高専ロボコンにおいて最も強い高専であると判断した.
+	また,比較を行うため,調査を快く引き受けてくれた福井高専さんを比較対象として調査することに決定した.
+	
+
+\chapter{他高専と金沢高専の比較}
+
+	\section{金沢高専の現状}
+	\,現在,金沢高専では本研究室が高専ロボコンにおけるAチームを担当するのが通例となっており,Bチームはロボコン部が担当している.
+	本研究ではAチーム,すなわち本研究室を対象として他高専との比較を行う.\\
+	
+	\section{訪問調査準備}
+
+		\subsection{奈良・福井高専生にコンタクトをとる}
+		\,卒業生と関わりのある奈良高専生にTwitterを通してコンタクトをとり,
+		見学することに問題がないことを確認した.
+		本校と交流が比較的ある福井高専については学校を通してコンタクトを取った.
+		
+		\subsection{他高専訪問調査・旅程}
+		\,奈良高専に調査しに行くための旅程を本報告書の最後にまとめた.
+		奈良高専には1月13日に日帰りで自分と花岡が訪問することになった.
+		福井高専には1月16日の卒研時間中に訪問することになった.
+		
+		\subsection{各高専について}
+		
+			\subsubsection{奈良高専について}
+			\begin{itemize}
+			\item \itab{指導教員}\tab{：櫟井先生}
+			\item \itab{学生数}\tab{：26人（2017）}
+			\item \itab{活動内容}\tab{：本大会に加え,各交流会に参加}
+			\end{itemize}
+			
+			\subsubsection{福井高専について}
+			\begin{itemize}
+			\item \itab{指導教員}\tab{：亀山先生,千徳先生,村田先生}
+			\item \itab{学生数}\tab{：30人程度（2017）}
+			\item \itab{活動内容}\tab{：本大会に加え,各交流会に参加,部内ロボコン}
+			\end{itemize}
+			
+			\subsubsection{金沢高専について}
+			\begin{itemize}
+			\item \itab{指導教員}\tab{：伊藤先生,林先生}
+			\item \itab{学生数}\tab{：8人（2017）}
+			\item \itab{活動内容}\tab{：本大会に参加}
+			\end{itemize}
+		
+		\subsection{調査内容}
+		\,高専ロボコンで勝つためには,金沢高専にない知識および経験が必要であると考えられる.
+		それを踏まえ,以下の調査項目を用意した.
+		\begin{itemize}
+		\item 整理・整頓の工夫
+		\item アイデアの出しにおける工夫
+		\item モータドライバ等の既成システム
+		\item スケジュール運用
+		\item 設計環境について
+		\item 機構を考える工夫
+		\item 卒業生の成果
+		\item 学校の授業について
+		\item ミスの防止について
+		\item 指導教員について
+		\item 各専門に関する知識
+		\end{itemize}
+	
+	\section{訪問調査}
+	
+		\subsection{奈良高専・調査項目}
+		\,奈良高専は2007年よりプロジェクトを立ち上げ,急激に高専ロボコン強豪校になった.
+		そのとき,何をどのように改善していったのかを主に調査する.
+		また,こちらで用意した質問を数名の学生に,
+		アンケートのような形で答えてもらう.
+		一日かけて,奈良高専の高専ロボコン活動に密着し,
+		話を聞く,アンケートを取るだけではわからない奈良高専の学生たちの
+		高専ロボコンに取り組むその雰囲気から,私たちが学ぶべきものを調べる.\\
+		調査票を表\ref{tble.nara}に示す.
+		
+		\begin{table}[H]
+		\caption{奈良高専調査票}
+		\label{tble.nara}
+		\begin{center}
+		\begin{tabular}[H]{|l|c|}
+		\hline
+		\multicolumn{1}{|c|}{項目}&結果\\
+		\hline
+		プロジェクトがどのように強くなったのかを調査する&\\
+		\hline
+		アンケート調査&\\
+		\hline
+		オフシーズンはどんなことをしているかを調査する&\\
+		\hline
+		作業場の写真を撮る&\\
+		\hline
+		工場までの距離を調査する&\\
+		\hline
+		テストランをする場所までの距離を調査する&\\
+		\hline
+		モータドライバ基板・回路を調査する&\\
+		\hline
+		下級生の教育システムを調査する&\\
+		\hline
+		ロボット設計における細かい知識・経験を学ぶ&\\
+		\hline
+		今年のロボコン活動について調査する&\\
+		\hline
+		\end{tabular}
+		\end{center}
+		\end{table}
+		
+		\subsection{福井高専・調査項目}
+		調査票を表\ref{tble.fukui}に示す.
+		
+		\begin{table}[H]
+		\caption{福井高専調査票}
+		\label{tble.fukui}
+		\begin{center}
+		\begin{tabular}[H]{|l|c|}
+		\hline
+		\multicolumn{1}{|c|}{項目}&結果\\
+		\hline
+		アンケート調査&\\
+		\hline
+		オフシーズンはどんなことをしているかを調査する&\\
+		\hline
+		作業場の写真を撮る&\\
+		\hline
+		工場までの距離を調査する&\\
+		\hline
+		テストランをする場所までの距離を調査する&\\
+		\hline
+		モータドライバ基板・回路を調査する&\\
+		\hline
+		下級生の教育システムを調査する&\\
+		\hline
+		ロボット設計における細かい知識・経験を学ぶ&\\
+		\hline
+		今年のロボコン活動について調査する&\\
+		\hline
+		\end{tabular}
+		\end{center}
+		\end{table}
+	
+	\section{調査結果}
+	\,奈良高専と福井高専を調査した結果,金沢高専と大きく違うことが判明した.
+	技術面において,ロボットを動かしている回路基板は先代より受け継がれてきた実績のあるものを用いており,
+	機構やロボットのアイデアも得意な分野を基にしてロボットを作っている.新しい知識は他高専との交流会を行って共有している.
+	本研究室は毎年,メンバー全員が異なるため,回路や機構は毎年違うものを製作している.それらはこれまでに本研究室で使った実績が無いため,
+	非常に不安定で,大会時に発生する未知のトラブルに対処しきれないという事がおきる.
+	
+	\begin{figure}[H]
+	\begin{center}
+	\includegraphics[width=52mm]{nara2.jpg}
+	\end{center}
+	\caption{奈良高専のモータドライバ}
+	\label{fig.nara2}
+	\end{figure}
+	
+	\begin{figure}[H]
+	\begin{center}
+	\includegraphics[width=52mm]{fukui1.jpg}
+	\end{center}
+	\caption{福井高専のモータドライバ}
+	\label{fig.fukui1}
+	\end{figure}
+	
+	\,電気回路に限らず,機構や加工方法の知識は上級生の活動を見たり,下級生主体で交流会に参加することで,知識が下の学年に伝達されていく.
+	加工技術そのものは金沢高専も他高専と比べて劣ることはなく,授業で学ぶことにも大きな違いはない.
+	金沢高専が高専ロボコンで勝てない理由は技術の伝承がされないことにあると思われる.\\
+	
+	　上記のようなことは他の高専でもほとんど同じであると思われる.奈良高専さんが特に強い理由としては,2008年からの高専ロボコンは
+	歩行ロボットが課題になることが増えたことにある.それまで強豪校であった高専が新しいルールで苦戦しているときに,奈良高専ではタイミングよく
+	ロボット製作の技術を研究し,下級生に教えていくようなプロジェクトが立ち上がったため,徐々に勝てるようになってきた.
+	勝てるようになると,それだけ経験する試合が増えるため,操縦や戦略を考える技術を学ぶ機会が多く得られる.
+	さらに,プロジェクト活動の雰囲気も勝ちにこだわるものへと変化し,奈良高専は強豪校となったと考えられる.
+	
+	\begin{figure}[H]
+	\begin{center}
+	\includegraphics[width=52mm]{nara1.jpg}
+	\end{center}
+	\caption{奈良高専ロボコン部の部室}
+	\label{fig.nara1}
+	\end{figure}
+	
+	\section{考察}
+	\,高専ロボコンで勝つためには,基礎的な知識と,失敗からの経験を上手く下の学年につなげることである.
+	\,ロボコンに関する情報を資料として残すことは15年以上も前の頃から
+	既に行っていたが,下の学年にその情報は伝わらなかったと考えられる.
+
+\chapter{資料作成}
+
+	\section{文献調査}
+	\,インターネットで大手通販サイトや,本学園の図書館を調査した結果,
+	7冊の文献\cite{key1}\cite{key2}\cite{key3}\cite{key4}\cite{key5}\cite{key6}\cite{key7}を発見した.
+	
+	\section{今年度の経験}
+	\,調査で得られた知識の他にも今年度からの経験も多くある.\\
+	\,今年度のメンバーは一人を除いて,ロボコン初心者のメンバーで構成された.
+	そんなメンバーがこの１年で経験したことから新たに知った知識も加え,
+	本研究の調査で得られた知識をまとめる.
+	
+	\section{資料まとめ}
+	\,以下に示すのは,他高専を調査して得られた情報,
+	文献を調査して得られた情報,今年度の経験より得られた情報をもとにしている.各系統に分け,
+	それぞれ重要であると考えられる順にまとめた.
+	
+		\subsection{機械系}
+		\begin{itemize}
+		\item バカ穴の直径が,通すネジの直径と同じだと組み立ての時に調整できない.M3ならば$\phi$3.5くらいの穴にする.図\ref{fig.baka}は参考文献の説明図である.
+		
+		\begin{figure}[H]
+		\begin{center}
+		\includegraphics[width=120mm]{baka.jpg}
+		\end{center}
+		\caption{バカ穴の効用※\cite{key4}}
+		\label{fig.baka}
+		\end{figure}
+		
+		\item 可動部の設計では,必ず案内を作り,隙間を作ってはいけない.隙間があると振動するため,緩みや破損の原因となり,危険である.
+		\item 摩擦が起こる可動部では,同種の素材を用いない.同種の素材同士で摩擦をすると,摩耗が早く,癒着の可能性がある.
+		\item 図\ref{fig.ribetto}に示すような,リベットはネジよりも軽いため,分解をしない場所はリベットでとめる.
+		
+		\begin{figure}[H]
+		\begin{center}
+		\includegraphics[width=120mm]{ribetto.jpg}
+		\end{center}
+		\caption{アルミリベット}
+		\label{fig.ribetto}
+		\end{figure}
+		
+		\item モータの軸のDカットを固定するとき,実験段階であれば以下のようなものを使うと便利である.図\ref{fig.dcut}は奈良高専で用いられているものである.
+	
+		\begin{figure}[H]
+		\begin{center}
+		\includegraphics[width=120mm]{dcut.jpg}
+		\end{center}
+		\caption{モータ軸固定冶具}
+		\label{fig.dcut}
+		\end{figure}
+		
+		\item 三角形の構造はもっとも強いため,フレームは三角形の集合のように設計するのが最も強い.図\ref{fig.sankaku}は2017年の例である.
+		
+		\begin{figure}[H]
+		\begin{center}
+		\includegraphics[width=120mm]{sankaku.jpg}
+		\end{center}
+		\caption{NAGA★,TUNE\#共通フレーム}
+		\label{fig.sankaku}
+		\end{figure}
+		
+		\item オムニ・メカナムホイールは滑りにくい素材を選択できる.また,駆動用とフリーローラ用の二種類ある.図\ref{fig.tokusyu}に例を示す.
+		
+		\begin{figure}[H]
+		\begin{center}
+		\includegraphics[width=120mm]{tokusyu.jpg}
+		\end{center}
+		\caption{オムニ・メカナムホイール※\cite{key9},\cite{key10}}
+		\label{fig.tokusyu}
+		\end{figure}
+		
+		\item オムニは4輪で用いるほうがロボットのバランスが安定する.
+		\item 鈴鹿高専のロボットは5x5カーボン角パイプと3Dプリンタジョイントで強い構造を作っている.
+		\item M2のねじは使わない.細すぎるため,少なくとも構造には用いないほうが良い.
+		\item 一方向に曲がって、ロックするような関節には、SUNUPの板ラチェットを切断して用いると便利である.
+		\item モータは朱雀技研オンラインストアで購入するとよい.
+		\item レーザー加工機でMDF板材を加工して部品にすると,ロボット全体の加工時間を短縮でき,スペアパーツも製作しやすい.図\ref{fig.laser}は2017年の例である.
+		
+		\begin{figure}[H]
+		\begin{center}
+		\includegraphics[width=120mm]{laser.jpg}
+		\end{center}
+		\caption{レーザー加工部品}
+		\label{fig.laser}
+		\end{figure}
+		
+		\item 外装用のフェルト布もレーザー加工機で裁断できる.
+		\item M3の長さ5mm,10mm,15mmのねじとナットはすぐに使い切ってしまうので初めに多く購入しておいたほうがよい.各種500個程度.
+		\item よくネジが緩むところは,ねじロック剤を塗るとよい.本研究室には図\ref{fig.lock}に示すものが存在する.
+		
+		\begin{figure}[H]
+		\begin{center}
+		\includegraphics[width=120mm]{rock.jpg}
+		\end{center}
+		\caption{ねじロック剤}
+		\label{fig.lock}
+		\end{figure}
+		
+		\item ガゼットプレートはアルミ材であれば1mmの厚みでよい.
+		\item 図\ref{fig.ana}の通り,穴をあけて軽量化するのは大変であるため,設計初めの段階から重さを考えたほうがよい.
+		
+		\begin{figure}[H]
+		\begin{center}
+		\includegraphics[width=120mm]{ana.jpg}
+		\end{center}
+		\caption{穴あけ軽量}
+		\label{fig.ana}
+		\end{figure}
+		
+		\item 大きいバカ穴をあけるときは図\ref{fig.takenoko}のような,ステップドリル(通称タケノコドリル)を用い,ハンドドリルで開けると早い.
+		
+		\begin{figure}[H]
+		\begin{center}
+		\includegraphics[width=120mm]{takenoko.jpg}
+		\end{center}
+		\caption{ステップドリル※\cite{key11}}
+		\label{fig.takenoko}
+		\end{figure}
+		
+		\item 部材を切るときは,長い部材から切ると,アルミ材の余りが出るのを抑えることができる.
+		\item フレームを二段にすると,ロボット全体の剛性が上がる.図\ref{fig.nidan}は二段フレームを用いている石川高専のロボットである.
+		
+		\begin{figure}[H]
+		\begin{center}
+		\includegraphics[width=120mm]{nidan.png}
+		\end{center}
+		\caption{2段フレーム}
+		\label{fig.nidan}
+		\end{figure}
+		
+		\item 軸,軸受けの軸方向の固定では,エンドプレートや止め輪を用いると,簡単である.
+		\item 軸受けを設計するとき,フランジユニットは便利である.図\ref{fig.funit}はシミズ精工のものである.
+		
+		\begin{figure}[H]
+		\begin{center}
+		\includegraphics[width=60mm]{funit.jpg}
+		\end{center}
+		\caption{フランジユニット※\cite{key8}}
+		\label{fig.funit}
+		\end{figure}
+		
+		\item リニアガイドを平行に対で用いるのは調整が難しいため,やらない方が良い.
+		\item アクリルの板は割れやすいので注意して設計する.
+		\item ロボット設計のときに,研究室の扉を通れるように,図\ref{fig.robosize}のように,ロボットの幅を1050mm以内にする.
+		
+		\begin{figure}[H]
+		\begin{center}
+		\includegraphics[width=120mm]{robosize.jpg}
+		\end{center}
+		\caption{最大サイズ}
+		\label{fig.robosize}
+		\end{figure}
+		
+		\item 輪ゴムは,劣化して引っ張る力が変化するので使わない.金属バネを使う.2017年の例を図\ref{fig.bane}に示す.
+		
+		\begin{figure}[H]
+		\begin{center}
+		\includegraphics[width=120mm]{bane.jpg}
+		\end{center}
+		\caption{金属バネを用いたカタパルト}
+		\label{fig.bane}
+		\end{figure}
+		
+		\item 設計において,ポンチ図・検討図・組図・部品図の違いを理解する.
+		\item 設計をするときは,まず手書きで大まかに形を決めてから,CAD上でモデリングする.はじめからCAD上でモデリングを行うと,各部の寸法が決まってしまうため,修正がしにくくなる.
+		\end{itemize}
+		
+		\subsection{電気系}
+		\begin{itemize}
+		\item 信号線と電源線を分けて配線し,信号線はねじってアルミホイルで包んでおくことで,ノイズが発生しにくくなる.
+		\item 部品の名前をいち早く覚える.ターミナルブロック等
+		\item 電線の太さに気をつける.大電流が流れる線には太いものを用いる.
+		\item 図\ref{fig.noisec}のように,モータのシェルにセラミックコンデンサをつけるとノイズを吸収してくれる.
+		
+		\begin{figure}[H]
+		\begin{center}
+		\includegraphics[width=120mm]{noisec.jpg}
+		\end{center}
+		\caption{DCブラシモータ\,スパイクノイズ対策}
+		\label{fig.noisec}
+		\end{figure}
+		
+		\item モータの付近等,機械部品の近くで線を切るときは,線の切れ端が機械に巻き込まれないように注意する.モータの中に入るとモータが壊れる.
+		\item ロボットの主電源を入れる前に（バッテリーをつなぐ前に）必ず,テスターで短絡確認を行う.
+		\item 変圧は図\ref{fig.henatsu}に示すようなDC-DCコンバータや三端子レギュレータでできる.
+		
+		\begin{figure}[H]
+		\begin{center}
+		\includegraphics[width=120mm]{henatsu.jpg}
+		\end{center}
+		\caption{変圧装置}
+		\label{fig.henatsu}
+		\end{figure}
+		
+		\item 図\ref{fig.hyuzu}に示す,ヒューズを用いると,全体の回路が壊れるのを阻止できる可能性ができる.ヒューズは過電流が流れた時に,電源を自動的に切ってくれる装置であるが,一度しか使えない.
+		
+		\begin{figure}[H]
+		\begin{center}
+		\includegraphics[width=120mm]{hyuzu.jpg}
+		\end{center}
+		\caption{ヒューズ}
+		\label{fig.hyuzu}
+		\end{figure}
+		
+		\item はんだ吸い取り器を用いるときは,ランドごと吸い取らないように気を付ける.
+		\item ランドの温度をあげるないと,はんだがうまく馴染まない.ランドとは図\ref{fig.kiban}に示す部分である.
+		
+		\begin{figure}[H]
+		\begin{center}
+		\includegraphics[width=120mm]{kiban.jpg}
+		\end{center}
+		\caption{基板}
+		\label{fig.kiban}
+		\end{figure}
+		
+		\item 基板製作では図面の読み取り間違えが起きやすいので,実態配線図はどこが交わるか交わらないかを明確に示す.2017年の例を図\ref{fig.zittai}に示す.
+		\end{itemize}
+		
+		\begin{figure}[H]
+		\begin{center}
+		\includegraphics[width=120mm]{zittai.jpg}
+		\end{center}
+		\caption{実態配線図}
+		\label{fig.zittai}
+		\end{figure}
+		
+		\subsection{制御系}
+		\begin{itemize}
+		\item PWM制御でDCモータの速度を制御できる.
+		\item 電圧と電流の違いを理解する.
+		\end{itemize}
+		
+		\subsection{マネジメント系}
+		\begin{itemize}
+		\item ロボットの完成は例年通りであれば,だいたい10月の初めになる.
+		\item 操縦練習は二週間できると十分である.
+		\item クリスマスくらいに,全国ロボコン交流会がある.
+		\item ロボットのアイデアを考えるときは,リーダーがおおまかな方針を決めてしまうほうが,チーム全体としてまとまりやすい.
+		\end{itemize}
+
+\chapter{勝つためには}
+
+	\section{技術の伝承}
+	\,ロボットに用いる機構のベースやモータドライバ等の電気回路の基礎を後に続く学生に残すことで,
+	戦術やアイデアを考える以外の無駄なところで時間がかからないようにすることがロボコンで勝つために最も重要なことであるとわかった.
+	
+	\section{交流会に参加}
+	\,各交流会に参加して他高専から新たな機構や材料,道具に関する知識を学び,アイデアを考える幅を広げることが必要である.
+	
+	\section{多くの試合を経験}
+	\,高専ロボコンがトーナメント形式である以上,試合で勝つほど操縦技能や戦略の向上が可能となり,強豪校と同じ立場に立てる.
+
+\chapter{結論}
+
+	\section{本研究まとめ}
+	\,今年は最後の金沢高専生として地区大会優勝を目指したが,
+	マシンの完成度があまり良くなく,勝てた作戦で負けてしまった.
+	今回の調査結果を踏まえ,本研究室が
+	来年以降の高専ロボコンで勝てることを期待する.
+	
+	\section{今後の課題}
+	\,今回からようやく知識の蓄積が本研究室で行われるようになり,今後の学生がスムーズに活動できるようになると思われるが,知識の蓄積には終わりがない.
+	そのため,今後の学生たちも学んだことがあればこの資料に追加して行くことで,高専ロボコンで勝てるようになるのではないかと思われる.
+
+\begin{thebibliography}{99}
+	\bibitem{key1} 闘え！高専ロボコン,萱原正嗣,ベストセラーズ,2017(9)
+	\bibitem{key2} ロボコン部品ガイドブック,オーム社,オーム社,2011(11)
+	\bibitem{key3} はじめてのロボコンマニュアル,鈴木泰博,オーム社,2000(9)
+	\bibitem{key4} ロボコン・ベーシック・スタディ,清水優史,オーム社,2002(11)
+	\bibitem{key5} 初めてのロボコン,WRO Japan,日経BP社,2009(9)
+	\bibitem{key6} ロボット製作のキーワード,清弘智昭,鈴木昇,オーム社,2000(1)
+	\bibitem{key7} はじめて作るセンサ搭載ロボット,城井田勝仁,オーム社,2000(8)
+	\bibitem{key8} モノタロウ,\url{https://www.monotaro.com/g/00492919/},2018.1.31
+	\bibitem{key9} 株式会社土佐電子 WEB SHOPPING,\url{http://www.tosadenshi.co.jp/cargo/goodslist.cgi?in_kate=20-1},2018.1.31
+	\bibitem{key10} 株式会社土佐電子 WEB SHOPPING,\url{http://www.tosadenshi.co.jp/cargo/goodslist.cgi?in_kate=30-1},2018.1.31
+	\bibitem{key11} モノタロウ,\url{https://www.monotaro.com/g/00533509/},2018.1.31
+\end{thebibliography}
+
+\chapter*{謝辞}
+\,本論文作成にあたりコンテスト参加の準備,テーマの決定,研究の考え方,まとめ方など全てにおいて長期にわたって厳しくも熱意のあるご指導,
+ご鞭撻していただいた,伊藤恒平教授,林道大教授に厚く御礼申し上げます.\\
+　調査にご協力いただいた奈良高専と福井高専の皆様および一緒にロボット製作を行ってきた同級生のメンバーには心より感謝しております.\\
+　NHK高専ロボコンのスタッフの皆様をはじめとする,助けていただいた多くの皆様に心から感謝しております.ありがとうございました.
+
+\addcontentsline{toc}{chapter}{謝辞}
+
+\end{document}
